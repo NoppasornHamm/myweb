@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Fay with an E</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: lavender;
+            background-color: rgb(255, 39, 147);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #roundCorners {
+            color: rgb(204, 0, 255);
+            border-radius: 25px;
+            padding: 10px;
+            background: rgb(238, 175, 233);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(255, 131, 152);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b6437e;
+            transform: scale(1.05);
+        }
+
+        .me-button {
+            background-color: lightblue;
+            color: black;
+        }
+
+        .nav-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .story-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #b97cc9;
+            border: 1px solid #ccc;
+        }
+
+        .card {
+            border: 2px solid lavender;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #modal {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        #modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+
+
+        .welcome-message {
+            animation: bounceIn 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Enhanced styles for intro message */
+        .intro-message {
+            color: rgb(250, 92, 189);
+            background: linear-gradient(90deg, rgba(255, 204, 204, 0.8), rgba(204, 204, 255, 0.8));
+            border: 2px solid #f1a7d3;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: popIn 1s ease forwards;
+            transform: scale(0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function showImage(src) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1 class="welcome-message">Welcome to the Most Girly Web Ever!</h1>
+        <h3
+            style="color: #E0218A; background-color: #fff0f5; border: 2px solid #f1a7d3; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+            👨🏻‍💻 Hey! I’m a social butterfly who loves coding and everything pink and Barbie-inspired.<br>
+            I mix creativity with tech while rocking my feminine style.<br>
+            Let’s show the world that girls can code and shine!<br>
+            And... like other girls, I LOVE TAYLOR SWIFT.
+        </h3>
+
+        <div class="nav-bar">
+            <a class="button" href="https://www.instagram.com/farafayyyy_">My Instagram</a>
+            <a class="button" href="https://www.youtube.com/watch?v=FuXNumBwDOM">Favorite Song</a>
+            <a class="button me-button" href="#aboutMe">About Me</a>
+            <a class="button" href="mailto:noppasornlekwikrom@gmail.com">Email Me!</a>
+            <a class="button" href="https://www.netflix.com/th/title/80136311?s=i&trkid=258593161&vlang=th">Favorite
+                Movie</a>
+        </div>
+
+        <img src="https://drive.google.com/uc?id=1PDioLDNp0X8iqy7QG1lwCv46aCf80ing" height="400">
+        <br>
+        <div class="intro-message" style="position: relative;">
+            <div class="glitter"></div>
+            Hi! I am Faye.<br>My first time creating my own web!
+        </div>
+        <div class="content">
+            <h2>My Special Trip to Japan at Age 11</h2>
+            <p>Hello! I’m Faye, and I want to share a very special experience that I had when I was just 11 years old—my
+                unforgettable trip to Japan during the winter with my family. This journey left me with so many
+                wonderful memories, and I hope you can feel that excitement as you read my blog!</p>
+
+            <div class="story-section">
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/tojapan.jpg')">
+                    <h3>1. From Thailand to Narita Airport: The Start of an Adventure</h3>
+                    <p>Our adventure began with a long flight from Thailand to Japan. I remember feeling a mix of
+                        excitement and nervousness as the plane took off. Once we landed at Narita Airport, I couldn’t
+                        believe my eyes. The airport was bustling with people, and everything felt so different from
+                        home. I felt like I had stepped into a completely new world filled with fascinating cultures,
+                        languages, and traditions. The thrill of being in a foreign country was overwhelming!</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/shibuya.jpg')">
+                    <h3>2. Shibuya: The Busy Walking Street</h3>
+                    <p>After settling into our hotel, we ventured out to explore the streets of Tokyo, starting with the
+                        famous Shibuya. The moment I stepped into the bustling street, I was taken aback by the sheer
+                        number of people. It was like a scene from a movie, with everyone crossing the street in an
+                        organized chaos. We paused to take pictures by the iconic Shibuya Crossing and tried delicious
+                        snacks from small shops along the way. Even though I was tired from all the walking, the energy
+                        and excitement of the place kept me going. Each step brought a new adventure, and I was loving
+                        every minute of it!</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/cotton.jpg')">
+                    <h3>3. The Vibrant Colors of Harajuku</h3>
+                    <p>Next on our itinerary was Harajuku, a neighborhood famous for its colorful fashion and quirky
+                        shops. As soon as we arrived, I was captivated by the unique styles people wore. It felt like
+                        stepping into a fashion show! I wandered from shop to shop, admiring the cute accessories and
+                        clothing. I even tried a delightful cotton candy that looked too pretty to eat—it was a fluffy
+                        masterpiece! Harajuku was a paradise for anyone who loves all things cute and colorful, and I
+                        never wanted to leave.</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/fuji.jpg')">
+                    <h3>4. Mount Fuji: Interesting but Optional</h3>
+                    <p>One of the highlights of any trip to Japan is Mount Fuji. The majestic mountain is an iconic
+                        symbol of Japan, and I was eager to see it up close. However, I quickly realized that getting
+                        there required quite a bit of hiking. While I found the mountain fascinating, I understood that
+                        hiking isn’t for everyone. If you’re not into long treks, it’s perfectly okay to skip this one.
+                        But for those who make the journey, the view is absolutely breathtaking and makes every bit of
+                        effort worthwhile.</p>
+                </div>
+                <div class="card" onclick="showImage('https://drive.google.com/uc?id=1tOYDKY8oLMMUU3SMEL9T_CEZBrdu9oVN')">
+                    <h3>5. My First Ski Experience</h3>
+                    <p>For many, skiing is a must-do activity when visiting Japan, especially in winter. I decided to
+                        give it a try, even though I’m not particularly fond of sports. The experience was both
+                        thrilling and challenging. The cold air was refreshing, but I quickly realized that I had a lot
+                        to learn! Watching everyone glide gracefully down the slopes made me both envious and amused at
+                        my own clumsiness. Still, I had a blast trying to keep up with my family, and the laughter we
+                        shared made it a memorable experience despite my lack of skill.</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/food1.jpg')">
+                    <h3>6. Delicious Food That Stays with You</h3>
+                    <p>No trip to Japan is complete without indulging in its culinary delights. I was amazed by the
+                        variety of food available. We tried mouthwatering ramen that was so delicious we couldn’t help
+                        but order seconds! The fresh sushi was another highlight, bursting with flavors that danced on
+                        my taste buds. And let’s not forget about the desserts! From colorful mochi to adorable
+                        pastries, each treat was a feast for both the eyes and the stomach. The food truly enriched my
+                        experience, making every meal a delightful adventure.</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/culture1.jpg')">
+                    <h3>7. Culture That Blends with Technology</h3>
+                    <p>One of the things that struck me most during my trip was how Japan beautifully balances tradition
+                        and modernity. As we visited ancient temples and participated in traditional rituals, I was in
+                        awe of their cultural richness. At the same time, the sleek technology and innovation
+                        surrounding us were evident everywhere. This harmonious blend created an atmosphere that felt
+                        both nostalgic and futuristic, making Japan an incredibly fascinating place to explore.</p>
+                </div>
+                <div class="card" onclick="showImage('file:///C:/Users/acer/Downloads/bye.jpg')">
+                    <h3>8. A Bittersweet Goodbye</h3>
+                    <p>After spending 10 incredible days in Japan, it was time to head back home to Thailand. As our
+                        departure approached, I felt a mix of sadness and gratitude. I had fallen in love with the
+                        country and its people, and I knew I would carry these memories with me forever. Though I’ve
+                        traveled to various places, nothing compares to the magic of Japan. Everything—from the vibrant
+                        cities to the serene landscapes—felt perfectly balanced and harmonious.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" onclick="closeModal()">
+            <span id="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Image" />
+        </div>
+
+        <div id="aboutMe"
+            style="background-color: #ffccff; padding: 20px; border: 2px solid lightpink; border-radius: 10px; margin-top: 20px;">
+            <h2>About Me</h2>
+            <video width="480" height="400" controls>
+
+                <source src="https://drive.google.com/file/d/1xSIN9Vag5TgTJ9raTy877wTg523WpTL_/preview"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            .
+            </video>
+            <p>Hey everyone! I’m the only daughter in my family, and I absolutely embrace it. I love learning new things
+                and am always eager to grow and improve myself. My ambition drives me to chase my dreams, and I thrive
+                in social situations. I enjoy talking and connecting with people, whether it's sharing stories or simply
+                having a good laugh. I can't wait to share my journey with all of you!
+
+            </p>
+        </div>
+    </center>
+</body>
+
+</html>
