@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำนวณค่า BMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>คำนวณค่า BMI</h1>
+    <div class="input-group">
+      <label for="weight">น้ำหนัก (กิโลกรัม):</label>
+      <input type="number" id="weight" placeholder="ใส่น้ำหนัก" oninput="calculateBMI()" required>
+    </div>
+    <div class="input-group">
+      <label for="height">ส่วนสูง (เซนติเมตร):</label>
+      <input type="number" id="height" placeholder="ใส่ส่วนสูง" oninput="calculateBMI()" required>
+    </div>
+    <div class="result">
+      <p id="bmiResult">ผล BMI: --</p>
+      <p id="bmiCategory">หมวดหมู่: --</p>
+      <p id="bmiAdvice">คำแนะนำ: --</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
